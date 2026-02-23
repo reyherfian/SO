@@ -1,20 +1,19 @@
-<<<<<<< HEAD
-=======
-# Jobsheet1
+# Jobsheet2
 ```Aqila Herfian/03```
 
-## 1.6.4 Instalasi Ubuntu
-<img src="https://github.com/reyherfian/SO/blob/main/praktikum1.png" alt="praktikum1">
+## Latihan 2.1
+1. CPUS: 1
+2. - core(s) per socket: 1
+   - thread(s) per socket: 1
+3. total swap:
+   - RAM = 1,9
+   - swap = 2,0
+4. RAM adalah memori utama yang sangat cepat digunakan untuk menjalankan aplikasi aktif. Swap adalah ruang di disk (SSD/HDD) yang digunakan sebagai cadangan darurat jika RAM penuh, namun kecepatannya jauh lebih lambat daripada RAM.
 
-## 1.7.6 Manual Partitioning
-1. Check RAM usage
-<img src="https://github.com/reyherfian/SO/blob/main/praktikum2.png" alt="RAM usage">
-2. Check Disk Space
-<img src="https://github.com/reyherfian/SO/blob/main/praktikum2%20(1).png" alt="disk space">
-3. Detail CPU
-<img src="https://github.com/reyherfian/SO/blob/main/praktikum2%20(2).png" alt="CPU">
-4. Lama sistem running
-<img src="https://github.com/reyherfian/SO/blob/main/praktikum2%20(3).png" alt="system running">
+## Latihan 2.2
+1. Perangkat PCI: [8086:100e] (rev 02)
+2. nama driver/modul kernel: e1000
+3. deskripsi fungsi: sebagai jembatan fisik antara komputer dan Ethernet. 
 
 ## 1.10.1 Latihan Konseptual
 ### Latihan 1.1
