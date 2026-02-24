@@ -15,44 +15,35 @@
 2. nama driver/modul kernel: e1000
 3. deskripsi fungsi: sebagai jembatan fisik antara komputer dan Ethernet. 
 
-## 1.10.1 Latihan Konseptual
-### Latihan 1.1
-1. Process Management
-   - Windows menggunakan Task Manager.
-   - Linux menggunakan command.
+## Latihan 2.3
+1. untuk sda dimulai dengan b (karea hard disk adalah media penyimpanan berbasis blok).
+2. untuk tty dimulai dengan c (karena terminal memproses input/output teks per karakter).
 
-2. RAM Management
+## Latihan 2.5
+- Nomor port: 53
+- protokol: UDP & TCP
+- service/proses: systemd-resolved
+- IP address 127.0.0.54
+
+## Latihan 2.A
+- Nama perangkat: Intel corporation 82540EM Gigabit Ethernet Controller [8086:100e]
+- ID vendor: 8086:100e
+- Kernel driver in use: e1000
+
+## Latihan 2.B
+1. mappeer/ubuntu--vg-ubuntu--lv 
+2. ubuntu--vg-ubuntu--lv
+3. UUID: 22e45c14-d91e-4bbc-bfb5-20842b8c6c47
+
+## Latihan 2.C
+5. RAM Management
    - Windows menggunakan fitur virtual memory.
    - Linux memiliki sistem Swap Partition, hanya digunakan jika benar-benar diperlukan.
 
-3. File Management
-   - Windows menggunakan sistem berbasis drive letter seperti c:\ atau d:\.
-   - Linux menggunakan sistem semua file bermuara pada satu root (/).
+## Latihan 2.F
+1. SIGTERM adalah sinyal penghentian sopan dan standar.
+2. SIGKILL adalah sinyal penghentian brutal dan paksa.
 
-4. I/O Management
-   - Windows unggul dalam konsep Plug-and-Play. Saat mencolokkan printer baru, windows secara otomatis mencari dan menginstal driver yang sesuai darii database internetnya.
-   - linux terpasang langsung di dalam kernel.
-  
-5. Security Management
-   - Windows memiliki Windows Defender dan ftur User Account Control yang memunculkan jendela konfirmasi berwarna biru/kuning.
-   - Linux memiliki keamanan yang sangat kuat. Pengguna biasa tidak memiliki hak akses administratif secara default.
-
-### Latihan 1.2
-1. Gaming
-   - Windows
-   - Alasan: Teknologi seperti DirectX 12 dan Auto HDR hanya ada di windows.
-2. Develoment
-   - Linux & macOS
-   - Alasan: Linux atau macOS berbasis Unix, memberikan lingkungan yang identik antara komputer lokal dan server produksi.  
-3. Server & Infrastructure
-   - Linux
-   - Alasan: Linus bersifat open-ssource, gratis, dan sangat ringan karena bisa dijalankan yanpa antarmuka grafis (CLI saja). Linux mampu berjalan berbulan-bulan tanpa reboot.
-4. Creative Work (Design, Video, Audio)
-   - macOS
-   - Alasan: Optimal antara software dan hardware membuat proses rendering video snagat senyap dan efisiensi baterai. layar perangkat Mac juga memiliki akurasi warna standar industri.
-5. Enterprise
-   - Windows
-   - Alasan: Kompatibilitas mutlak dengan Microsoft Office (Excel standar dunia bisnis). Selain itu, tim IT prusahaan lebih mudah mengella ratusan komputer sekaligus menggunakan alat seperti Group Policy.
 
 
 
