@@ -9,12 +9,12 @@ Aqila Herfian/03/TI-1H
 
 2. Melihat direktori aktual dan parent direktori
 ```
-   *$ pwd*
-   *& cd .*
-   *$ pwd*
-   *$ cd ..*
-   *$ pwd*
-   *$ cd*
+   $ pwd
+   & cd .
+   $ pwd
+   $ cd ..
+   $ pwd
+   $ cd
 ```
 <img src="https://github.com/reyherfian/SO/blob/9871bb61f603ad6efb2c255f9df2b607d59af02b/Minggu%204/JS%204%20percobaan%201.2.png" alt="langkah 2">
 
@@ -48,4 +48,5 @@ Aqila Herfian/03/TI-1H
    *$ pwd*
 <img src="https://github.com/reyherfian/SO/blob/9871bb61f603ad6efb2c255f9df2b607d59af02b/Minggu%204/JS%204%20percobaan%201.5.png" alt="latihan 5">
 * cd /<user>/C* error karena path yang ditulis tidak ada.
+
 
