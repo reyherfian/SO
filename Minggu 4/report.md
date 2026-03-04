@@ -1,4 +1,4 @@
-# Jobsheet 3
+# Jobsheet 4
 Aqila Herfian/03/TI-1H
 
 ## Percobaan 1: Directory
@@ -38,8 +38,8 @@ Aqila Herfian/03/TI-1H
    $ ls -l B
    ```
 <img src="https://github.com/reyherfian/SO/blob/9871bb61f603ad6efb2c255f9df2b607d59af02b/Minggu%204/JS%204%20percobaan%201.4.png" alt="langkah 4">
-*$ rmdir B* terdapat eror karena direktori B tidak kosong. Jika ada file atau subdirektori, rmdir pasti gagal.
-*kalau B tidak ada di folder sekarang, *$ ls -l B* perintah itu pasti error.
+- $ rmdir B terdapat eror karena direktori B tidak kosong. Jika ada file atau subdirektori, rmdir pasti gagal.
+- kalau B tidak ada di folder sekarang, $ ls -l B perintah itu pasti error.
 
 5. Navigasi direktori dengan instruksi cd untuk pindah dari satu direktori ke direktori lain.
    ```
@@ -55,7 +55,8 @@ Aqila Herfian/03/TI-1H
    $ pwd
    ```
 <img src="https://github.com/reyherfian/SO/blob/9871bb61f603ad6efb2c255f9df2b607d59af02b/Minggu%204/JS%204%20percobaan%201.5.png" alt="latihan 5">
-* cd /<user>/C* error karena path yang ditulis tidak ada.
+- cd /<user>/C error karena path yang ditulis tidak ada.
+
 
 
 
