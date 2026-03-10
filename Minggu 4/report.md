@@ -106,8 +106,57 @@ $ cat mydir/halo.juga
 ln -s z bye.txt
 $ ls -l bye.txt
 $ cat bye.txt
+```
+<img src = "https://github.com/reyherfian/SO/blob/ba97e5757f5fa1ddb5d7bc064a36670df909d423/Minggu%204/JS%204%20percobaan%203.png" alt = "percobaan 3">
 
+## percobaan 4
+```
+$ ls -l
+$ file halo.txt
+$ fil bye.txt
+```
+<img src = "https://github.com/reyherfian/SO/blob/494cf9a9b6a3d956a755a57d112c0ed234ba3a82/Minggu%204/JS%204%20percobaan%204.png" alt = "percobaan 4">
 
+## percobaan 5
+< img src = "https://github.com/reyherfian/SO/blob/5b5297f50b6198de6973ce91cf63fd4287ec85fa/Minggu%204/JS%204%20percobaan%205.png" alt = "percobaan 5">
 
+## percobaan 6
+<img src = "https://github.com/reyherfian/SO/blob/d5385a5f791d71112dd80ff2f5c7c1e798aee73a/Minggu%204/JS%204%20percobaan%206.png" alt = "percobaan 6">
+
+## Latihan 1
+<img src = "https://github.com/reyherfian/SO/blob/8161158e8a2a7818c2a02f65a1fb1563a8d61f80/Minggu%204/JS%204%20latihan%201.1.png">
+
+<img src = "https://github.com/reyherfian/SO/blob/8161158e8a2a7818c2a02f65a1fb1563a8d61f80/Minggu%204/JS%204%20latihan%201.2.png">
+
+<img src = "https://github.com/reyherfian/SO/blob/8161158e8a2a7818c2a02f65a1fb1563a8d61f80/Minggu%204/JS%204%20latihan%201.3.png">
+
+<img src = "https://github.com/reyherfian/SO/blob/8161158e8a2a7818c2a02f65a1fb1563a8d61f80/Minggu%204/JS%204%20latihan%202.png">
+
+<img src = "https://github.com/reyherfian/SO/blob/8161158e8a2a7818c2a02f65a1fb1563a8d61f80/Minggu%204/JS%204%20latihan%203.png">
+
+<img src = "https://github.com/reyherfian/SO/blob/8161158e8a2a7818c2a02f65a1fb1563a8d61f80/Minggu%204/JS%204%20latihan%2045.png">
+
+<img src = "https://github.com/reyherfian/SO/blob/8161158e8a2a7818c2a02f65a1fb1563a8d61f80/Minggu%204/JS%204%20latihan%20678.png">
+
+## Laporan Resmi
+a. - Perintah pwd (Print Working Directory) digunakan untuk memastikan posisi folder kamu saat ini agar tidak salah saat memanipulasi file. 
+   - Perintah cd .. berfungsi untuk naik satu tingkat ke folder "induk"       (parent), sementara cd ~ atau cd saja akan selalu membawa kamu pulang ke    folder Home user.
+   - Penggunaan ls -l memberikan informasi detail seperti tipe file (karakter pertama), izin akses, pemilik, dan waktu modifikasi.
+   - cp (copy) menduplikasi file ke lokasi baru tanpa menghapus aslinya.
+   - mv (move) memindahkan file atau bisa juga digunakan untuk mengubah nama file (rename).
+   - rm (remove) menghapus file secara permanen. Penggunaan flag -i (interactive) sangat disarankan untuk pemula agar sistem meminta konfirmasi sebelum menghapus
+   - Hard Link: Membuat nama lain untuk data yang sama. Jika file asli dihapus, data tetap ada selama masih ada link lain yang menunjuk ke sana
+   - Soft Link (Symbolic): Berfungsi seperti shortcut di Windows. Jika file asli dihapus, link ini akan rusak (broken link) karena ia hanya menunjuk ke alamat file aslinya.
+     
+b. <img src = "https://github.com/reyherfian/SO/blob/bc6313a5017dae57eda1ab9b72bdc9bd3727163f/Minggu%204/JS%204%20laoran%20resmi.png">
+
+c. - "rmdir: failed to remove 'B': Directory not empty": Penyebab: Perintah rmdir hanya dapat digunakan untuk menghapus direktori yang benar-benar kosong. Kesalahan ini muncul karena direktori B masih memiliki sub-direktori atau file di dalamnya, seperti folder F
+- "No such file or directory": Sistem tidak dapat menemukan file atau direktori yang dimaksud karena kesalahan penulisan nama atau jalur (path). Perlu diperhatikan bahwa Linux bersifat case sensitive, sehingga penggunaan huruf besar dan kecil sangat berpengaruh (contoh: A dan a dianggap berbeda)
+- "Permission denied": Pengguna mencoba mengakses atau memodifikasi file/direktori yang memiliki hak akses terbatas, seperti direktori /etc atau /root yang hanya boleh dikelola oleh superuser.
+
+## kesimpulan
+Sistem file pada Linux diatur secara hirarkhikal menyerupai pohon (tree) yang dimulai dari direktori root dengan simbol /.
+Linux memiliki standar direktori dengan fungsi yang spesifik, seperti /etc untuk file konfigurasi administrasi , /dev untuk representasi perangkat keras , /proc sebagai pseudo-filesystem yang berisi informasi kernel dan proses , serta /home sebagai tempat penyimpanan data bagi pengguna umum.
+Melalui instruksi baris perintah (command line), pengguna dapat melakukan manipulasi file dan direktori secara cepat, mulai dari pencarian file menggunakan find atau locate , hingga pencarian teks spesifik di dalam file menggunakan perintah grep.
 
 
