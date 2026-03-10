@@ -94,6 +94,18 @@ Aqila Herfian/03/TI-1H
 <img src="https://github.com/reyherfian/SO/blob/0056f8ace890e179892940e84ea3622e9e658f89/Minggu%204/JS%204%20percobaan%202.3.png" alt="langkah 3">
 
 ## Percobaan 3: Symbolic link
+   ```
+$ echo "Hallo apa khabar" > halo.txt
+$ ls -l
+$ ln halo.txt z
+$ ls -l
+$ cat z
+$ mkdir mydir
+$ ln z mydir/halo.juga
+$ cat mydir/halo.juga
+ln -s z bye.txt
+$ ls -l bye.txt
+$ cat bye.txt
 
 
 
