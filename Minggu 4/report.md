@@ -57,6 +57,56 @@ Aqila Herfian/03/TI-1H
 <img src="https://github.com/reyherfian/SO/blob/9871bb61f603ad6efb2c255f9df2b607d59af02b/Minggu%204/JS%204%20percobaan%201.5.png" alt="latihan 5">
 - cd /user/C error karena path yang ditulis tidak ada.
 
+## Percobaan 2: Manipulasi file
+1. Perintah cp untuk mengkopi file atau seluruh direktori
+   ```
+   $ cat > contoh
+   membuat sebuah file
+   [Ctrl-d]
+   $ cp contoh contohl
+   $ ls -l
+   $ cp contoh A
+   $ ls -l A
+   $ cp contoh contohl A/D
+   $ ls -l A/D
+   ```
+<img src="https://github.com/reyherfian/SO/blob/0056f8ace890e179892940e84ea3622e9e658f89/Minggu%204/JS%204%20percobaan%202.png" alt="langkah 1">
+
+2. Perintah mv untuk memindah file
+   ```
+   $ mv contoh contoh2
+   $ ls -l
+   $ mv contohl contoh2 A/D
+   $ ls -l A/D
+   $ mv contoh contohl C
+   $ ls -l C
+   ```
+<img src="https://github.com/reyherfian/SO/blob/0056f8ace890e179892940e84ea3622e9e658f89/Minggu%204/JS%204%20percobaan%202.2.png" alt="langkah 2">
+
+3. perintah rm untuk menghapus file
+   ```
+   $ rm contoh2
+   $ ls -l
+   $ rm -i contoh
+   $ rm -rf A C
+   $ ls -l
+   ```
+<img src="https://github.com/reyherfian/SO/blob/0056f8ace890e179892940e84ea3622e9e658f89/Minggu%204/JS%204%20percobaan%202.3.png" alt="langkah 3">
+
+## Percobaan 3: Symbolic link
+   ```
+$ echo "Hallo apa khabar" > halo.txt
+$ ls -l
+$ ln halo.txt z
+$ ls -l
+$ cat z
+$ mkdir mydir
+$ ln z mydir/halo.juga
+$ cat mydir/halo.juga
+ln -s z bye.txt
+$ ls -l bye.txt
+$ cat bye.txt
+
 
 
 
