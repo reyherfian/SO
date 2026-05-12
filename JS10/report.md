@@ -5,7 +5,7 @@
 <h4>Mata Kuliah : System Operasi<h4>
 
 ## Praktikum 10.1 
-< img src ="https://github.com/reyherfian/SO/blob/7a0ed4ffd7c0f8106f87a6e3e7d5c754938eae82/JS10/praktikum%2010.1.png">
+<img src ="https://github.com/reyherfian/SO/blob/7a0ed4ffd7c0f8106f87a6e3e7d5c754938eae82/JS10/praktikum%2010.1.png" alt = "Praktikum 10.1">
 ### Tugas 10.1 
 < img src = "https://github.com/reyherfian/SO/blob/7a0ed4ffd7c0f8106f87a6e3e7d5c754938eae82/JS10/Tugas%2010.1.png">
 
