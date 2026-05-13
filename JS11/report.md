@@ -152,36 +152,36 @@ sudo setfacl -d -m u:deploy:rx /srv/webapp
 ```
 
 ## Latihan 9.B
-Buat user intern: Gunakan useradd dengan shell Bash agar user memiliki antarmuka terminal yang standar.
-Tambahkan ke labgroup: Pastikan grup ini sudah ada sebelum menambahkan user ke dalamnya.
+- Buat user intern: Gunakan useradd dengan shell Bash agar user memiliki antarmuka terminal yang standar.
+- Tambahkan ke labgroup: Pastikan grup ini sudah ada sebelum menambahkan user ke dalamnya.
 ```
 sudo groupadd labgroup
 sudo useradd -m -s /bin/bash -G labgroup intern
 sudo passwd intern
 ```
 
-Maksimum umur password (-M): Diatur ke 45 hari.
-Peringatan kedaluwarsa (-W): Diatur mulai 7 hari sebelum jatuh tempo.
-Paksa ganti saat login pertama (-d 0): Memastikan user segera mengganti password bawaan saat pertama kali masuk ke sistem.
+- Maksimum umur password (-M): Diatur ke 45 hari.
+- Peringatan kedaluwarsa (-W): Diatur mulai 7 hari sebelum jatuh tempo.
+- Paksa ganti saat login pertama (-d 0): Memastikan user segera mengganti password bawaan saat pertama kali masuk ke sistem.
 ```
 sudo chage -M 45 -W 7 -d 0 intern
 ```
 
-Untuk memberikan izin systemctl status saja, kita harus membuat file konfigurasi khusus di direktori sudoers.d.
-Modularitas: Menyimpan aturan di /etc/sudoers.d/ lebih aman daripada mengedit file utama.
-Sintaks Perintah: Tentukan jalur lengkap binari perintah agar tidak bisa disalahgunakan.
+- Untuk memberikan izin systemctl status saja, kita harus membuat file konfigurasi khusus di direktori sudoers.d.
+- Modularitas: Menyimpan aturan di /etc/sudoers.d/ lebih aman daripada mengedit file utama.
+S- intaks Perintah: Tentukan jalur lengkap binari perintah agar tidak bisa disalahgunakan.
 ```
 sudo visudo -f /etc/sudoers.d/sudo-intern
 intern ALL=(root) /bin/systemctl status *
 ```
 
-Soft Limit vs Hard Limit: Soft limit memberikan peringatan, sedangkan hard limit memblokir penulisan data secara mutlak.
-Blok vs Inode: Pembatasan block menjaga kapasitas (misal: 10MB), sedangkan inode menjaga jumlah file (misal: 100 file).
+- Soft Limit vs Hard Limit: Soft limit memberikan peringatan, sedangkan hard limit memblokir penulisan data secara mutlak.
+- Blok vs Inode: Pembatasan block menjaga kapasitas (misal: 10MB), sedangkan inode menjaga jumlah file (misal: 100 file).
 ```
 sudo edquota -u intern
 ```
 
 Hasil Verifikasi yang Diharapkan
-sudo chage -l intern: Pastikan password expires menunjukkan 45 hari ke depan.
-sudo -l -U intern: Verifikasi bahwa user hanya boleh menjalankan systemctl status.
-sudo repquota /home: Pastikan statistik kuota untuk user intern sudah muncul dengan batasan yang baru diatur.
+- sudo chage -l intern: Pastikan password expires menunjukkan 45 hari ke depan.
+- sudo -l -U intern: Verifikasi bahwa user hanya boleh menjalankan systemctl status.
+- sudo repquota /home: Pastikan statistik kuota untuk user intern sudah muncul dengan batasan yang baru diatur.
