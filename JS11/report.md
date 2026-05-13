@@ -67,14 +67,14 @@ Buat user bernama intern yang:
 • menjadi anggota labgroup;
 • dipaksa ganti password pada login pertama;
 • password expired setelah 45 hari dengan warning 7 hari sebelumnya.
-'''
+```
 sudo useradd -m -s /bin/bash -G labgroup intern
 sudo passwd intern
 sudo chage -M 45 -W 7 intern
 sudo chage -d 0 intern
 id intern
 sudo chage -l intern
-'''
+```
 
 ## Praktikum 9.4
 <img width="944" height="362" alt="image" src="https://github.com/user-attachments/assets/9b0a8791-55f9-4f58-8678-3bf155b8f91f" />
@@ -117,7 +117,7 @@ Coba atur quota baru untuk userA dengan batas inode yang sangat kecil, kemudian 
 inode lebih penting daripada pembatasan block.
 <img width="944" height="572" alt="image" src="https://github.com/user-attachments/assets/423f6662-40b0-43f1-ac37-1664a874900c" />
 
-'''
+```
 sudo umount /mnt/quota-test 2>/dev/null
 sudo rm /tmp/quota-test.img
 sudo dd if=/dev/zero of=/tmp/quota-test.img bs=1M count=100
@@ -130,7 +130,7 @@ mount | grep quota-test
 sudo quotacheck -cugm /mnt/quota-test
 sudo quotaon -v /mnt/quota-test
 sudo repquota /mnt/quota-test
-'''
+```
 
 ## Latihan 9.A
 <img width="745" height="635" alt="image" src="https://github.com/user-attachments/assets/6852e5ca-7664-4553-924c-954e8acb574a" />
@@ -140,7 +140,7 @@ sudo repquota /mnt/quota-test
    - /usr/bin/chage: Sesuai praktikum kita sebelumnya, file ini perlu SUID agar user bisa melihat atau mengubah informasi masa berlaku password mereka yang tersimpan di file sistem terproteksi.
 2. Setiap direktori di luar sistem temporer (seperti direktori konfigurasi atau direktori aplikasi di /var/www/) yang memiliki permission 777. Risiko utamanya adalah Privilege Escalation, di mana penyerang bisa menyisipkan skrip berbahaya yang kemudian dijalankan oleh sistem atau user lain.
 3. Konfigurasi
-'''   
+```  
 sudo mkdir -p /srv/webapp
 sudo chgrp webapp-team /srv/webapp
 
@@ -149,36 +149,39 @@ sudo setfacl -m u:deploy:rx /srv/webapp
 
 sudo setfacl -d -m g:webapp-team:rwx /srv/webapp
 sudo setfacl -d -m u:deploy:rx /srv/webapp
-'''
+```
 
 ## Latihan 9.B
 Buat user intern: Gunakan useradd dengan shell Bash agar user memiliki antarmuka terminal yang standar.
 Tambahkan ke labgroup: Pastikan grup ini sudah ada sebelum menambahkan user ke dalamnya.
-'''
+```
 sudo groupadd labgroup
 sudo useradd -m -s /bin/bash -G labgroup intern
 sudo passwd intern
-'''
+```
+
 Maksimum umur password (-M): Diatur ke 45 hari.
 Peringatan kedaluwarsa (-W): Diatur mulai 7 hari sebelum jatuh tempo.
 Paksa ganti saat login pertama (-d 0): Memastikan user segera mengganti password bawaan saat pertama kali masuk ke sistem.
-'''
+```
 sudo chage -M 45 -W 7 -d 0 intern
-'''
+```
+
 Untuk memberikan izin systemctl status saja, kita harus membuat file konfigurasi khusus di direktori sudoers.d.
 Modularitas: Menyimpan aturan di /etc/sudoers.d/ lebih aman daripada mengedit file utama.
 Sintaks Perintah: Tentukan jalur lengkap binari perintah agar tidak bisa disalahgunakan.
-'''
+```
 sudo visudo -f /etc/sudoers.d/sudo-intern
 intern ALL=(root) /bin/systemctl status *
-'''
+```
+
 Soft Limit vs Hard Limit: Soft limit memberikan peringatan, sedangkan hard limit memblokir penulisan data secara mutlak.
 Blok vs Inode: Pembatasan block menjaga kapasitas (misal: 10MB), sedangkan inode menjaga jumlah file (misal: 100 file).
-'''
+```
 sudo edquota -u intern
-'''
+```
+
 Hasil Verifikasi yang Diharapkan
-Untuk memastikan semua langkah berhasil, Kakak bisa menjalankan perintah audit berikut:
 sudo chage -l intern: Pastikan password expires menunjukkan 45 hari ke depan.
 sudo -l -U intern: Verifikasi bahwa user hanya boleh menjalankan systemctl status.
 sudo repquota /home: Pastikan statistik kuota untuk user intern sudah muncul dengan batasan yang baru diatur.
