@@ -37,3 +37,6 @@
 
 ## Studi Kasus 10.6
 <img src = "https://github.com/reyherfian/SO/blob/7a0ed4ffd7c0f8106f87a6e3e7d5c754938eae82/JS10/praktikum%2010.6.png" alt = "Studi Kasus 10.6">
+
+## 1.6 Tugas Praktikum
+<img src = "https://github.com/reyherfian/SO/blob/51cfbb3c2524ce162459412231665a8a17e8454d/JS10/Tugas%20Praktikum%201.6.png">
